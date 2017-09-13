@@ -1,0 +1,81 @@
+
+
+public class HomeTask1 {
+
+    public static void main(String[] args) {
+
+
+
+        //1
+        int a = 10;
+        int b = 20;
+        int s = a*b;
+
+        System.out.println("Task1 "+s);
+
+        //2
+        double L;
+        double S;
+        int R = 56;
+        double pi = 3.14;
+        System.out.println("Task2");
+        System.out.println("L="+2*pi*R);
+        System.out.println("S="+(pi*(R*R)));
+
+        //3
+        int i = 4;
+        int f = 7;
+        System.out.println("Task3");
+        System.out.println(i+f/2);
+
+
+        //4 Даны два неотрицательных числа a и b. 
+        //Найти их среднее геометрическое, то есть квадратный корень из их произведения.
+
+        int a1 = 2;
+        int b1 = 4;
+        System.out.println("Task4");
+        System.out.println(Math.sqrt(a1*b1));
+        
+        
+        /*5. Найти расстояние между двумя точками с заданными координатами x1 и x2
+         *  на числовой оси: |x2 – x1|.
+         * */
+
+        System.out.println("Task5");
+        int x1 = 45;
+        int x2 = -10;
+        System.out.println("Расстояние по модулю "+Math.abs(x2-x1));
+        
+        
+        /*6. Даны координаты двух противоположных вершин прямоугольника: (x1, y1), (x2, y2). 
+         * Стороны прямоугольника параллельны осям координат. 
+         * Найти периметр и площадь данного прямоугольника.
+         * */
+        
+        int aX = 1;
+        int aY = 7;
+        int bX = 2;
+        int bY = 9;
+        
+        int aLengh = bX - aX;
+        int bLengh = bY - aY;
+        
+        System.out.println("Длинна стороны а = "+ aLengh);
+        System.out.println("Длинна стороны b = "+ bLengh);
+        
+        //Part 2
+
+        //Task1
+        int e1 = -4;
+        boolean t1 = e1 > 0;
+        System.out.println(t1);
+
+        //Task2
+        int d1 = 6;
+        boolean r2 = d1%2==0;
+        System.out.println(r2+"Парное");
+    }
+
+
+}

@@ -153,7 +153,7 @@ public class Task1 {
     public void Task8() {
         int a = 7;
 
-        switch (a){
+        switch (a) {
             case 1:
                 System.out.println("Понедельник");
                 break;
@@ -181,8 +181,73 @@ public class Task1 {
                 System.out.println("Воскресенье");
                 break;
 
-                default:
-                    System.out.println("Понедельник");
+            default:
+                System.out.println("Понедельник");
         }
     }
+
+
+    //9. Дано целое число K. Вывести строку-описание оценки, соответствующей числу K
+    // (1, 2 — «неудовлетворительно», 3 — «удовлетворительно», 4 — «хорошо», 5 — «отлично»). Если K не лежит в диапазоне 1–5, то вывести строку «ошибка».
+
+    public void Task9() {
+
+        int K = 0;
+
+        String error = "ошибка";
+
+        if (K > 5 | K < 1) {
+            System.out.println("ошибка");
+        } else {
+
+
+        }
+
+        switch (K) {
+            case 1:
+            case 2:
+                System.out.println("неудовлетворительно");
+            case 3:
+                System.out.println("удовлетворительно");
+            case 4:
+                System.out.println("хорошо");
+            case 5:
+                System.out.println("отлично");
+        }
+    }
+
+    //10. Единицы длины пронумерованы следующим образом: 1 — дециметр, 2 — километр, 3 — метр, 4 — миллиметр, 5 — сантиметр.
+    // Дан номер единицы длины (целое число в диапазоне 1–5) и длина отрезка в этих единицах (вещественное число). Найти длину отрезка в метрах.
+
+    public void Task10() {
+
+        int A = 5;
+        double length = 2.2;
+
+        double fullValue;
+
+        switch (A){
+
+            case 1:
+                fullValue = length*0.1;
+                System.out.println(fullValue);
+            case 2:
+                fullValue = length*1000;
+                System.out.println(fullValue);
+            case 3:
+                fullValue = length;
+                System.out.println(fullValue);
+            case 4:
+                fullValue = length/1000;
+                System.out.println(fullValue);
+            case 5:
+                fullValue = length/100;
+                System.out.println(fullValue);
+                
+
+        }
+
+
+    }
+
 }

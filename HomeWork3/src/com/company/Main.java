@@ -14,6 +14,9 @@ public class Main {
         task1.Task6();
         task1.Task7();
         task1.Task8();
+        task1.Task9();
+        task1.Task10();
+
 
         Loops loops = new Loops();
         loops.Task1();

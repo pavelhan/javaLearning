@@ -243,7 +243,7 @@ public class Task1 {
             case 5:
                 fullValue = length/100;
                 System.out.println(fullValue);
-                
+
 
         }
 

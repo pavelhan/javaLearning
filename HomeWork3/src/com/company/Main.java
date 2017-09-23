@@ -21,5 +21,13 @@ public class Main {
         Loops loops = new Loops();
         loops.Task1();
         loops.Task2();
+        loops.Task3();
+        loops.Task4();
+        loops.Task5();
+        loops.Task6();
+        loops.Task7();
+        loops.Task8();
+        loops.Task9();
+        loops.Task10();
     }
 }

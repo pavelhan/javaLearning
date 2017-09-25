@@ -29,5 +29,6 @@ public class Main {
         loops.Task8();
         loops.Task9();
         loops.Task10();
+        loops.Task11();
     }
 }

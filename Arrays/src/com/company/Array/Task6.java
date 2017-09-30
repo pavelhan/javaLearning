@@ -4,9 +4,8 @@ public class Task6 {
     public static void main(String[] args) {
         //6. Дан целочисленный массив размера N. Найти количество различных элементов в данном массиве.
 
-        int N = 5;
 
-        int array[] = {1, 1, 3, 4, 4};
+        int array[] = {1, 1, 1, 1, 1};
 
         int uniqueCount = 0;
 
@@ -19,9 +18,10 @@ public class Task6 {
                 }
 
             }
-            if (flag == true)
+            if (flag == true) {
                 uniqueCount++;
-
+            }
+            flag = true;
         }
         System.out.println(uniqueCount);
 

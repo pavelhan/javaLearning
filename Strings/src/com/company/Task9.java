@@ -8,9 +8,16 @@ public class Task9 {
 
         String s = "I love my, wife";
 
-        String [] words = s.split(" |,");
+        String[] words = s.split(" |,");
+        String smallWord = words[0];
 
-
-
+        for (int i = 1; i < words.length - 1; i++) {
+            if (!words[0].equals("")) {
+                if (words[i].length() <= smallWord.length()) {
+                    smallWord = words[i];
+                }
+            }
+        }
+        System.out.println(smallWord);
     }
 }

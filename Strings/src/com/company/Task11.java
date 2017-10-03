@@ -8,5 +8,29 @@ public class Task11 {
 
     public static void main(String[] args) {
 
+        String cryptedString = "я Нужно Зашифровать строку, которая задана тут.";
+
+        char[] CryptedArray = cryptedString.toCharArray();
+
+        for (int i = 0; i < CryptedArray.length; i++) {
+            char a = CryptedArray[i];
+            if (a != ' ' & a != ',' & a != '.') {
+                if (a == 'Я'){
+                    a = 'A';
+                }else if (a == 'я'){
+                    a = 'а';
+                }else {
+                    a++;
+                }
+
+                CryptedArray[i] = a;
+            }
+        }
+
+        for (int i = 0; i < CryptedArray.length; i++) {
+            System.out.print(CryptedArray[i]);
+        }
+
+
     }
 }

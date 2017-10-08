@@ -8,13 +8,18 @@ public class Task2 {
         isFirstDigitEqualsLast();
     }
 
-    public static void isFirstDigitEqualsLast(){
+    public static void isFirstDigitEqualsLast() {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
+        boolean isEqual =false;
+        String s = number + "";
 
 
+        if (s.charAt(0) == s.charAt(s.length() - 1)) {
+            isEqual = true;
 
+        }
 
-
+        System.out.println("Fist digit equals to second? " + isEqual);
     }
 }

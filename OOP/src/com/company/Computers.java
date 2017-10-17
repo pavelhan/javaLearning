@@ -4,23 +4,21 @@ public class Computers extends Device {
 
     public int DDRCapacity;
 
-    public void setDDRCapacity(int DDRCapacity) {
-        this.DDRCapacity = DDRCapacity;
+
+    public Computers setDDRCapacity(int value){
+        this.DDRCapacity = value;
+        return this;
     }
 
 
-    public Computers setDDRCapacity(int value, Computers computer){
-
-        computer.setDDRCapacity(value);
-
-        return computer;
+    public int getDDRCapacity() {
+        return DDRCapacity;
     }
 
-
-    public Device setPower(int value, Device device){
+    public Device setPower(int power){
         System.out.println("Переопределенный метод");
-        device.power = value;
-        return device;
+        this.power = power;
+        return this;
     }
 
 

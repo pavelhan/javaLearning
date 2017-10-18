@@ -1,8 +1,8 @@
-package com.company;
+package com.company.devicesHierarhy;
 
 public class Laptops extends Computers {
 
-    protected int weight;
+    public int weight;
 
     public int getWeight() {
         return weight;

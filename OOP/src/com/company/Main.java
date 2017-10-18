@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.devicesHierarhy.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class Main {
 
         //2. Создайте несколько объектов этих классов и выведите информацию  о них на экран.
         // Создаем обьект ноутбук
-        Laptops laptop = new Laptops();
+      Laptops laptop = new Laptops();
         laptop.weight = 2;
         laptop.name = "HP";
         laptop.DDRCapacity = 4000;
@@ -68,10 +70,18 @@ public class Main {
         7. Предусмотрите возможность сравнения (больше/меньше) различных устройств. Сравнение компьютеров проводите по
         количеству оперативной памяти, телевизоров – по размеру диагонали, остальных устройств – по потребляемой мощности.
         */
-        myPC.compareDevices(laptop);
+        myPC.compare(laptop);
 
 
-
+        //Practice 12
+        //Task1
+        //Create a couple of servers
+        Servers server1 = new Servers(4);
+        Servers server2 = new Servers(6);
+        server1.setCoresCount(99);
+        System.out.println(Servers.getTotalCoreCount());
+        System.out.println(server1.getDeviceID());
+        System.out.println(server2.getDeviceID());
 
 
 

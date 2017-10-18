@@ -1,9 +1,9 @@
-package com.company;
+package com.company.devicesHierarhy;
 
 public class Plazmas extends TVs {
 
-    protected int pixelCountX;
-    protected int pixelCountY;
+    public int pixelCountX;
+    public int pixelCountY;
 
     public int getPixelCountX() {
         return pixelCountX;

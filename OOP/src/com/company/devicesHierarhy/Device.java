@@ -1,19 +1,42 @@
-package com.company;
+package com.company.devicesHierarhy;
+
+import java.util.Random;
 
 public class Device {
 
+    static {
+        Random random = new Random();
+        guid = random.nextInt(1000);
+
+    }
 
     public String name;
     public int power;
+    public int deviceID;
+    private static int guid;
+    Device neighbour;
+
+    public void setNeighbour(Device neighbour) {
+        this.neighbour = neighbour;
+    }
+
+    private void setDeviceID() {
+        deviceID = guid;
+        guid++;
+    }
 
     public Device() {
-
+        setDeviceID();
     }
 
     public Device(int power) {
 
         setPower(power);
+        setDeviceID();
+    }
 
+    public int getDeviceID() {
+        return deviceID;
     }
 
     public String getName() {
@@ -70,26 +93,26 @@ public class Device {
         количеству оперативной памяти, телевизоров – по размеру диагонали, остальных устройств – по потребляемой мощности.
         */
 
-    public void compareDevices (Device device2){
+    public void compare(Device device2) {
         String s1 = "1st device is bigger than second";
         String s2 = "2nd device is bigger than first";
-        
-        if (this instanceof Computers & device2 instanceof Computers){
-            if (((Computers) this).DDRCapacity >= ((Computers) device2).DDRCapacity){
+
+        if (this instanceof Computers & device2 instanceof Computers) {
+            if (((Computers) this).DDRCapacity >= ((Computers) device2).DDRCapacity) {
                 System.out.println(s1);
-            }else {
+            } else {
                 System.out.println(s2);
             }
-        }else if (this instanceof TVs & device2 instanceof TVs){
-            if (((TVs) this).screenSize >= ((TVs) device2).screenSize){
+        } else if (this instanceof TVs & device2 instanceof TVs) {
+            if (((TVs) this).screenSize >= ((TVs) device2).screenSize) {
                 System.out.println(s1);
-            }else {
+            } else {
                 System.out.println(s2);
             }
-        }else {
-            if (this.power >= device2.power){
+        } else {
+            if (this.power >= device2.power) {
                 System.out.println(s1);
-            }else {
+            } else {
                 System.out.println(s2);
             }
         }

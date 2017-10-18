@@ -1,4 +1,4 @@
-package com.company;
+package com.company.devicesHierarhy;
 
 public class ELTs extends TVs {
 

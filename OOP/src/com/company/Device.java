@@ -70,10 +70,29 @@ public class Device {
         количеству оперативной памяти, телевизоров – по размеру диагонали, остальных устройств – по потребляемой мощности.
         */
 
-    public void compareDevices (Device device1, Device device2){
-
+    public void compareDevices (Device device2){
+        String s1 = "1st device is bigger than second";
+        String s2 = "2nd device is bigger than first";
         
-
+        if (this instanceof Computers & device2 instanceof Computers){
+            if (((Computers) this).DDRCapacity >= ((Computers) device2).DDRCapacity){
+                System.out.println(s1);
+            }else {
+                System.out.println(s2);
+            }
+        }else if (this instanceof TVs & device2 instanceof TVs){
+            if (((TVs) this).screenSize >= ((TVs) device2).screenSize){
+                System.out.println(s1);
+            }else {
+                System.out.println(s2);
+            }
+        }else {
+            if (this.power >= device2.power){
+                System.out.println(s1);
+            }else {
+                System.out.println(s2);
+            }
+        }
 
     }
 

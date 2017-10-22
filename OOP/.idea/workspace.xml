@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04014fd2-6e69-49f3-bcc8-a0902c4a09cf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Computers.java" afterPath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Computers.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Device.java" afterPath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Device.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/devicesHierarhy/ELTs.java" afterPath="$PROJECT_DIR$/src/com/company/devicesHierarhy/ELTs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Laptops.java" afterPath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Laptops.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Players.java" afterPath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Players.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Plazmas.java" afterPath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Plazmas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/devicesHierarhy/PowerGenerator.java" afterPath="$PROJECT_DIR$/src/com/company/devicesHierarhy/PowerGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Servers.java" afterPath="$PROJECT_DIR$/src/com/company/devicesHierarhy/Servers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/devicesHierarhy/TVs.java" afterPath="$PROJECT_DIR$/src/com/company/devicesHierarhy/TVs.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="69" column="101" lean-forward="true" selection-start-line="69" selection-start-column="101" selection-end-line="69" selection-end-column="101" />
+            <state relative-caret-position="1411">
+              <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,24 +101,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Device.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Device.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/devicesHierarhy/Device.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="130" column="18" lean-forward="false" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
+            <state relative-caret-position="1315">
+              <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding>
                 <element signature="initializer##0;class#Device#0" expanded="false" />
-                <element signature="method#setDeviceID#0;class#Device#0" expanded="false" />
-                <element signature="e#867#868#0" expanded="true" />
-                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#1041#1042#0" expanded="true" />
+                <element signature="e#1069#1070#0" expanded="true" />
                 <element signature="method#setPower#0;class#Device#0" expanded="false" />
                 <element signature="method#calculateDevicesPower#0;class#Device#0" expanded="false" />
                 <element signature="method#calculateDevicesDDRCapacity#0;class#Device#0" expanded="false" />
                 <element signature="method#compare#0;class#Device#0" expanded="false" />
-                <element signature="e#4018#4019#0" expanded="true" />
-                <element signature="e#4071#4072#0" expanded="true" />
-                <element signature="e#4104#4105#0" expanded="true" />
-                <element signature="e#4145#4146#0" expanded="true" />
+                <element signature="e#5531#5532#0" expanded="true" />
+                <element signature="e#5584#5585#0" expanded="true" />
+                <element signature="e#5706#5707#0" expanded="true" />
+                <element signature="e#5747#5748#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -201,8 +190,8 @@
         <option value="$PROJECT_DIR$/src/com/company/devicesHierarhy/ELTs.java" />
         <option value="$PROJECT_DIR$/src/com/company/devicesHierarhy/Computers.java" />
         <option value="$PROJECT_DIR$/src/com/company/devicesHierarhy/PowerGenerator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/devicesHierarhy/Device.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/devicesHierarhy/Device.java" />
       </list>
     </option>
   </component>
@@ -1326,10 +1315,10 @@
         <state relative-caret-position="527">
           <caret line="39" column="5" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
           <folding>
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1401,10 +1390,10 @@
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1498,10 +1487,10 @@
         <state relative-caret-position="278">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1573,10 +1562,10 @@
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1678,32 +1667,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/devicesHierarhy/Device.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="130" column="18" lean-forward="false" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
+        <state relative-caret-position="1315">
+          <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding>
             <element signature="initializer##0;class#Device#0" expanded="false" />
-            <element signature="method#setDeviceID#0;class#Device#0" expanded="false" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
             <element signature="method#setPower#0;class#Device#0" expanded="false" />
             <element signature="method#calculateDevicesPower#0;class#Device#0" expanded="false" />
             <element signature="method#calculateDevicesDDRCapacity#0;class#Device#0" expanded="false" />
             <element signature="method#compare#0;class#Device#0" expanded="false" />
-            <element signature="e#4018#4019#0" expanded="true" />
-            <element signature="e#4071#4072#0" expanded="true" />
-            <element signature="e#4104#4105#0" expanded="true" />
-            <element signature="e#4145#4146#0" expanded="true" />
+            <element signature="e#5531#5532#0" expanded="true" />
+            <element signature="e#5584#5585#0" expanded="true" />
+            <element signature="e#5706#5707#0" expanded="true" />
+            <element signature="e#5747#5748#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="69" column="101" lean-forward="true" selection-start-line="69" selection-start-column="101" selection-end-line="69" selection-end-column="101" />
-          <folding />
         </state>
       </provider>
     </entry>

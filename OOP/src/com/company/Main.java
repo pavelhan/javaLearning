@@ -20,7 +20,7 @@ public class Main {
 
         //2. Создайте несколько объектов этих классов и выведите информацию  о них на экран.
         // Создаем обьект ноутбук
-      Laptops laptop = new Laptops();
+      Laptops laptop = new Laptops("Dell");
         laptop.weight = 2;
         laptop.name = "HP";
         laptop.DDRCapacity = 4000;
@@ -28,14 +28,14 @@ public class Main {
         System.out.println("Name " + laptop.name + " Weight " + laptop.weight + " DDRCapacity " + laptop.DDRCapacity);
 
         // Создаем обьект плеер
-        Players player = new Players();
+        Players player = new Players("Iriver");
         player.name = "Walkman";
         player.playbackType[0] = "Forward";
         player.playbackType[1] = "Backward";
 
         System.out.println("Name " + player.name + " Playback type " + player.playbackType[0]);
 
-        Plazmas plazma = new Plazmas();
+        Plazmas plazma = new Plazmas("LG!");
 
         plazma.name = "LG";
         plazma.pixelCountX = 1920;
@@ -48,7 +48,7 @@ public class Main {
         //уже созданным устройствам позднее. Создайте ноутбук без указания мощности и назначьте этому ноутбуку мощность.
 
 
-        Laptops laptop1 = new Laptops();
+        Laptops laptop1 = new Laptops("555");
 
         laptop1.setPower(300);
 
@@ -58,7 +58,7 @@ public class Main {
     Используйте эти методы на практике.*/
 
 
-        Computers myPC = new Computers();
+        Computers myPC = new Computers("PC111");
         myPC.setPower(300);
         myPC.setDDRCapacity(4096);
         System.out.println("DDR Capacity = " + myPC.DDRCapacity);
@@ -76,13 +76,44 @@ public class Main {
         //Practice 12
         //Task1
         //Create a couple of servers
-        Servers server1 = new Servers(4);
-        Servers server2 = new Servers(6);
+        Servers server1 = new Servers("X", 5);
+        Servers server2 = new Servers("Y", 10);
         server1.setCoresCount(99);
         System.out.println(Servers.getTotalCoreCount());
         System.out.println(server1.getDeviceID());
         System.out.println(server2.getDeviceID());
 
+      /*4. Создайте генератор электричества с определённой мощностью. Предусмотрите возможность включения устройств в сеть через соседнее устройство
+      (т.е. одно в другое (только 1:1)). Присоедините ваши устройства к генератору(те, которым хватило мощности) и распечатайте получившуюся цепочку.
+      Разорвите одно соединение и выведите цепочку подключенных устройств. Не используйте массивы.
+*/
+
+      PowerGenerator philips = new PowerGenerator("philips", 8000);
+
+      Laptops dellLaptop = new Laptops("Vostro1540");
+      dellLaptop.setPower(1000);
+
+
+      TVs zenit = new TVs("Zenit");
+      zenit.setPower(2000);
+
+
+      Servers serverM = new Servers("MAC", 12);
+      serverM.setPower(5000);
+
+
+      Players iRiver = new Players("Iriver");
+      iRiver.setPower(500);
+
+
+      Plazmas samsung = new Plazmas("XsuperPuper");
+      samsung.setPower(2000);
+
+
+      philips.connectDevice(dellLaptop).connectDevice(zenit).connectDevice(serverM).connectDevice(iRiver).connectDevice(samsung);
+      philips.printDeviceChain();
+      serverM.unplugDevice();
+      philips.printDeviceChain();
 
 
     }

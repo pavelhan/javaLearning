@@ -6,6 +6,8 @@ public class Servers extends Computers {
 
     private static int totalCoreCount = 0;
 
+
+
     public static int getTotalCoreCount() {
         return totalCoreCount;
     }
@@ -17,7 +19,8 @@ public class Servers extends Computers {
 
     }
 
-    public Servers(int coresCount){
+    public Servers(String name, int coresCount){
+        super(name);
         this.coresCount = coresCount;
         totalCoreCount +=coresCount;
     }

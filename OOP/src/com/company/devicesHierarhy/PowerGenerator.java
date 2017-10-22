@@ -1,20 +1,25 @@
 package com.company.devicesHierarhy;
 
-public class PowerGenerator {
+public class PowerGenerator extends Device {
 
     private int totalPower;
+
 
     public void setTotalPower(int totalPower) {
         this.totalPower = totalPower;
     }
 
-    public PowerGenerator(int totalPower){
+    public PowerGenerator(String name, int totalPower){
+        super(name);
         this.totalPower = totalPower;
+
+    }
+    public void changeTotalPower(Device device){
+        this.totalPower -= device.getPower();
+
     }
 
-    public void connectDevice(Device connectedDevice){
-        totalPower -= connectedDevice.power;
+    public int getTotalPower() {
+        return totalPower;
     }
-
-
 }

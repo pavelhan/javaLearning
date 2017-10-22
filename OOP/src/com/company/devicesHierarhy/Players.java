@@ -4,7 +4,8 @@ public class Players extends Device {
 
     public String [] playbackType;
 
-    public Players(){
+    public Players(String name){
+        super(name);
         playbackType = new String[2];
         //playbackType[0] = "Forward";
         //playbackType[1] = "Backward";

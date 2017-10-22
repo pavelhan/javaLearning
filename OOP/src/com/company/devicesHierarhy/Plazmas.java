@@ -5,6 +5,10 @@ public class Plazmas extends TVs {
     public int pixelCountX;
     public int pixelCountY;
 
+    public Plazmas(String name){
+        super(name);
+    }
+
     public int getPixelCountX() {
         return pixelCountX;
     }

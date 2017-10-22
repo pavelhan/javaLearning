@@ -4,6 +4,9 @@ public class Computers extends Device {
 
     public int DDRCapacity;
 
+    public Computers(String name){
+        super(name);
+    }
 
     public Computers setDDRCapacity(int value){
         this.DDRCapacity = value;
@@ -15,11 +18,7 @@ public class Computers extends Device {
         return DDRCapacity;
     }
 
-    public Device setPower(int power){
-        System.out.println("Переопределенный метод");
-        this.power = power;
-        return this;
-    }
+
 
     /*2. Предполагая, что объём памяти для компьютеров хранится в байтах, создайте методы перевода этих значений
     в мегабайты и гигабайты*/

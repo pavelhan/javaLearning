@@ -11,27 +11,26 @@ public class Device {
     }
 
     public String name;
-    public int power;
+    private int power;
     public int deviceID;
     private static int guid;
-    Device neighbour;
+    Device pluggedDevice;
+    PowerGenerator currentGenerator;
 
-    public void setNeighbour(Device neighbour) {
-        this.neighbour = neighbour;
-    }
 
     private void setDeviceID() {
         deviceID = guid;
         guid++;
     }
 
-    public Device() {
+    public Device(String name, int power) {
+        this.name = name;
+        this.power = power;
         setDeviceID();
     }
 
-    public Device(int power) {
-
-        setPower(power);
+    public Device(String name) {
+        this.name = name;
         setDeviceID();
     }
 
@@ -117,6 +116,42 @@ public class Device {
             }
         }
 
+    }
+
+
+
+    public Device connectDevice(Device device){
+        if (this instanceof PowerGenerator){
+            device.currentGenerator = (PowerGenerator) this;
+        }else {
+            device.currentGenerator = this.currentGenerator;
+        }
+        if (device.power <= device.currentGenerator.getTotalPower() & this.pluggedDevice == null){
+            this.pluggedDevice = device;
+            device.currentGenerator.changeTotalPower(device);
+        }else {
+            System.out.println("Device " + device.name + "can't be connected");
+            return this;
+        }
+        return device;
+    }
+
+    private String deviceChain(Device device){
+        String chain;
+        if (device.pluggedDevice ==null){
+            chain = device.name;
+            return chain;
+        }
+        chain = device.name + " " + deviceChain(device.pluggedDevice);
+        return chain;
+    }
+
+    public void printDeviceChain(){
+        System.out.println(deviceChain(this));
+    }
+
+    public void unplugDevice(){
+        this.pluggedDevice = null;
     }
 
 

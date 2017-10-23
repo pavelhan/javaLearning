@@ -1,12 +1,14 @@
 package com.company.devicesHierarhy;
 
-public class Plazmas extends TVs {
+import com.company.Manufacturers;
+
+public final class Plazmas extends TVs {
 
     public int pixelCountX;
     public int pixelCountY;
 
-    public Plazmas(String name){
-        super(name);
+    public Plazmas(String name, int power, Manufacturers manufacturer){
+        super(name, power, manufacturer);
     }
 
     public int getPixelCountX() {

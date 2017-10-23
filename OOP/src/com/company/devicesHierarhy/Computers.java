@@ -1,15 +1,33 @@
 package com.company.devicesHierarhy;
 
-public class Computers extends Device {
+import com.company.Manufacturers;
+
+public abstract class Computers extends Device {
 
     public int DDRCapacity;
+    public static final int minRam = 64;
+    public static final int maxRam = 2048;
+
 
     public Computers(String name){
         super(name);
     }
 
+    public Computers(String name, int DDRCapacity, int power, Manufacturers manufacturer){
+        super(name, power, manufacturer);
+        setDDRCapacity(DDRCapacity);
+
+    }
+
+
+
     public Computers setDDRCapacity(int value){
-        this.DDRCapacity = value;
+        if(value <= maxRam & value >= minRam){
+            this.DDRCapacity = value;
+        }else {
+            this.DDRCapacity = 0;
+            System.out.println("Please enter valid ram quantity between " + minRam + " and " + maxRam);
+        }
         return this;
     }
 
@@ -37,6 +55,10 @@ public class Computers extends Device {
         return convertedNumber;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Computers{" +
+                "DDRCapacity=" + DDRCapacity +
+                '}' + super.toString();
+    }
 }

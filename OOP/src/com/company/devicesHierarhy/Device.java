@@ -1,8 +1,10 @@
 package com.company.devicesHierarhy;
 
+import com.company.Manufacturers;
+
 import java.util.Random;
 
-public class Device {
+public abstract class Device {
 
     static {
         Random random = new Random();
@@ -16,6 +18,7 @@ public class Device {
     private static int guid;
     Device pluggedDevice;
     PowerGenerator currentGenerator;
+    Manufacturers manufacturer;
 
     //Unique ID generator
     private void setDeviceID() {
@@ -23,9 +26,10 @@ public class Device {
         guid++;
     }
     //Constructor 1
-    public Device(String name, int power) {
+    public Device(String name, int power, Manufacturers manufacturer) {
         this.name = name;
         this.power = power;
+        this.manufacturer = manufacturer;
         setDeviceID();
     }
     //Constructor 2
@@ -150,27 +154,36 @@ public class Device {
     }
 
     //This method is building device chain
-    private String deviceChain(Device device){
+    public String deviceChain(){
         // creation of chain string which will concatenate all connected devices using recursion
         String chain;
         //we will call this one until there will be no connected device left
-        if (device.pluggedDevice ==null){
-            chain = device.name;
+        if (this.pluggedDevice ==null){
+            chain = this.name;
             return chain;
         }
-        chain = device.name + " " + deviceChain(device.pluggedDevice);
-        return chain;
+        return chain = this.name + " " + this.pluggedDevice.deviceChain();
+
     }
 
     //print device chain using method above
-    public void printDeviceChain(){
+    /*public void printDeviceChain(){
         System.out.println(deviceChain(this));
-    }
+    }*/
 
     // this method changing current plugged device to Null and in this way brake a chain
     public void unplugDevice(){
         this.pluggedDevice = null;
     }
 
-
+    @Override
+    public String toString() {
+        return "Device{" +
+                "name='" + name + '\'' +
+                ", power=" + power +
+                ", deviceID=" + deviceID +
+                ", pluggedDevice=" + pluggedDevice +
+                ", currentGenerator=" + currentGenerator +
+                '}';
+    }
 }

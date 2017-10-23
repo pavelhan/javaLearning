@@ -1,5 +1,7 @@
 package com.company.devicesHierarhy;
 
+import com.company.Manufacturers;
+
 public class Servers extends Computers {
 
     private int coresCount;
@@ -19,8 +21,8 @@ public class Servers extends Computers {
 
     }
 
-    public Servers(String name, int coresCount){
-        super(name);
+    public Servers(String name, int coresCount, int DDRCapacity, int power, Manufacturers manufacturer){
+        super(name, DDRCapacity, power, manufacturer);
         this.coresCount = coresCount;
         totalCoreCount +=coresCount;
     }

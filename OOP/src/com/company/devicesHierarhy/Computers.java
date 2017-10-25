@@ -2,12 +2,14 @@ package com.company.devicesHierarhy;
 
 import com.company.Manufacturers;
 
+import java.math.BigDecimal;
+
 public abstract class Computers extends Device {
 
     public int DDRCapacity;
     public static final int minRam = 64;
     public static final int maxRam = 2048;
-
+    public static final double computerTax = 8.125;
 
     public Computers(String name){
         super(name);
@@ -60,5 +62,10 @@ public abstract class Computers extends Device {
         return "Computers{" +
                 "DDRCapacity=" + DDRCapacity +
                 '}' + super.toString();
+    }
+
+    public BigDecimal taxAmountCalc(){
+
+    return this.getPrice().multiply(new BigDecimal(computerTax)).divide(new BigDecimal(100)).setScale(2, BigDecimal.ROUND_CEILING);
     }
 }

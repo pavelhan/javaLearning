@@ -1,7 +1,9 @@
 package com.company.devicesHierarhy;
 
+import com.company.Battary;
 import com.company.Manufacturers;
 
+import java.math.BigDecimal;
 import java.util.Random;
 
 public abstract class Device {
@@ -19,6 +21,8 @@ public abstract class Device {
     Device pluggedDevice;
     PowerGenerator currentGenerator;
     Manufacturers manufacturer;
+    Battary battary;
+    BigDecimal price;
 
     //Unique ID generator
     private void setDeviceID() {
@@ -53,6 +57,11 @@ public abstract class Device {
         this.name = name;
     }
 
+    //Getter for price
+    public BigDecimal getPrice() {
+        return price;
+    }
+
     //Getter for Device power
     public int getPower() {
         return power;
@@ -63,6 +72,11 @@ public abstract class Device {
 
         this.power = power;
         return this;
+    }
+
+    //Setter for price
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
     //5. Создайте метод, который будет подсчитывать суммарную мощность всех ваших приборов.
@@ -184,6 +198,16 @@ public abstract class Device {
                 ", deviceID=" + deviceID +
                 ", pluggedDevice=" + pluggedDevice +
                 ", currentGenerator=" + currentGenerator +
+                ", manufacturer slogan = " + (manufacturer != null ? " Slogan= " + manufacturer.getSlogan() : " No slogan") +
                 '}';
     }
+
+    public void plugBattary(Battary battary){
+        this.battary = battary;
+    }
+
+    public Battary getBattary() {
+        return battary;
+    }
 }
+

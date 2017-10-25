@@ -11,6 +11,10 @@ public class Laptops extends Computers {
 
     }
 
+    public Laptops(String name){
+        super(name);
+    }
+
 
 
     public int getWeight() {

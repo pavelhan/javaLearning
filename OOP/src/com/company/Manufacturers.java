@@ -10,7 +10,10 @@ public enum Manufacturers {
         this.slogan = slogan;
     }
 
-    private String getSlogan(){
+    public String getSlogan(){
         return slogan;
     }
+
+
+
 }

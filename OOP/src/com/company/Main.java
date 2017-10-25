@@ -2,6 +2,8 @@ package com.company;
 
 import com.company.devicesHierarhy.*;
 
+import java.math.BigDecimal;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -118,8 +120,18 @@ public class Main {
 
       //Practice 13
 
-        Computers myDell = new Laptops("myDell", 3, 200, Manufacturers.GL);
+        Computers myDell = new Laptops("myDell", 400, 500, Manufacturers.GL);
         System.out.println(myDell.getDDRCapacity());
+      System.out.println(myDell.toString());
+
+      //Pactice 15
+      myDell.plugBattary(Battary.b1);
+      System.out.println(myDell.getBattary().calculateTime(myDell));
+
+      myDell.setPrice(new BigDecimal(100));
+      System.out.println("Pay " + myDell.taxAmountCalc() + " taxes for this " + myDell.name);
+
+
 
     }
 

@@ -65,7 +65,9 @@ public abstract class Computers extends Device {
     }
 
     public BigDecimal taxAmountCalc(){
-
-    return this.getPrice().multiply(new BigDecimal(computerTax)).divide(new BigDecimal(100)).setScale(2, BigDecimal.ROUND_CEILING);
+    BigDecimal price = new BigDecimal(this.getPrice());
+    return price.multiply(new BigDecimal(computerTax)).divide(new BigDecimal(100)).setScale(2, BigDecimal.ROUND_CEILING);
     }
+
+
 }

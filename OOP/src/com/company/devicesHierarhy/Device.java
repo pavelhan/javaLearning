@@ -22,7 +22,7 @@ public abstract class Device {
     PowerGenerator currentGenerator;
     Manufacturers manufacturer;
     Battary battary;
-    BigDecimal price;
+    double price;
 
     //Unique ID generator
     private void setDeviceID() {
@@ -58,7 +58,7 @@ public abstract class Device {
     }
 
     //Getter for price
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -75,17 +75,19 @@ public abstract class Device {
     }
 
     //Setter for price
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
     //5. Создайте метод, который будет подсчитывать суммарную мощность всех ваших приборов.
     //Calculate totalPower of specified devices
-    public int calculateDevicesPower(Device... device) {
+    public static int calculateDevicesPower(Device[] device) {
         int totalPower = 0;
 
         for (int i = 0; i < device.length; i++) {
-            totalPower += device[i].power;
+            if(device[i].power != 0) {
+                totalPower += device[i].power;
+            }
         }
 
         return totalPower;
@@ -94,7 +96,7 @@ public abstract class Device {
     /*6. Создайте метод, который будет подсчитывать суммарное количество оперативной памяти у всех ваших приборов
             (если прибор  не является компьютером, считать, что у него нет оперативной памяти).*/
     //Calculate total DDR Capacity
-    public int calculateDevicesDDRCapacity(Device... device) {
+    public int calculateDevicesDDRCapacity(Device[] device) {
         int totalDDR = 0;
 
         for (int i = 0; i < device.length; i++) {

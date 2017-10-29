@@ -2,8 +2,6 @@ package com.company;
 
 import com.company.devicesHierarhy.*;
 
-import java.math.BigDecimal;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -128,11 +126,24 @@ public class Main {
       myDell.plugBattary(Battary.b1);
       System.out.println(myDell.getBattary().calculateTime(myDell));
 
-      myDell.setPrice(new BigDecimal(100));
+      myDell.setPrice(10);
       System.out.println("Pay " + myDell.taxAmountCalc() + " taxes for this " + myDell.name);
 
+      //Создам несколько устройств и посчитаю их мощность
 
+      Device [] devices = new Device[]{
+        new Players("Iriver",50),
+        new Laptops("HPone", 100),
+        new Servers("Oct", 200)
 
+      };
+
+      System.out.println("Total power = " + Device.calculateDevicesPower(devices));
+
+      //Создам сервер
+      Servers server = new Servers("Octopus");
+      server.setPrice(1000);
+      System.out.println("With a discount, my server " + server.name + " will cost " + server.discountPrice(5));
     }
 
 

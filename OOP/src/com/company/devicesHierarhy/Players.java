@@ -17,6 +17,10 @@ public class Players extends Device {
         super.setPower(power);
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Players [" +
+                "name='" + name + '\'' +
+                " ]";
+    }
 }

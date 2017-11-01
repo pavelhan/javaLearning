@@ -204,6 +204,9 @@ public abstract class Device {
                 '}';
     }
 
+
+
+
     public void plugBattary(Battary battary){
         this.battary = battary;
     }

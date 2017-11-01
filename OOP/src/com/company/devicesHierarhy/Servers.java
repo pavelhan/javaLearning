@@ -48,6 +48,10 @@ public class Servers extends Computers {
     Доступ к этой информации у пользователя должен быть только на чтение и вне зависимости от наличия серверов в программе.
 */
 
-
-
+    @Override
+    public String toString() {
+        return "Servers [" +
+                "name='" + name + '\'' +
+                " ]";
+    }
 }

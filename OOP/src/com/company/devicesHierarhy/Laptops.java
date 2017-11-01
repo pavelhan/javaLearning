@@ -29,4 +29,13 @@ public class Laptops extends Computers {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
+    @Override
+    public String toString() {
+        return "Laptops [" +
+                "name='" + name + '\'' +
+                " ]";
+    }
 }
+
+

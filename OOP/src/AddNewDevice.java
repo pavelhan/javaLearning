@@ -41,7 +41,15 @@ public class AddNewDevice {
                 int computerPower = Integer.parseInt(computerPowerText.getText());
                 int computerRAM = Integer.parseInt(computerRAMtext.getText());
                 Laptops computer = new Laptops(computerName, computerPower, computerRAM, Manufacturers.GL);
-                MainForm.devices.addElement(computer);
+                if (computer != null) {
+                computer.setName(computerName);
+                computer.setPower(computerPower);
+                computer.setDDRCapacity(computerRAM);
+                }
+                {
+                    MainForm.devices.addElement(computer);
+                }
+
             }
         });
         cancelButton.addActionListener(new ActionListener() {

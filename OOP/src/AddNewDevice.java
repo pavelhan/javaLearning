@@ -25,28 +25,38 @@ public class AddNewDevice {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-        if(laptops != null) {
-            computerID.setText(laptops.getDeviceID()+"");
+        if (laptops != null) {
+            computerID.setText(laptops.getDeviceID() + "");
             computerNameText.setText(laptops.getName());
             computerPowerText.setText(laptops.getPower() + "");
             computerRAMtext.setText(laptops.getDDRCapacity() + "");
         }
 
 
-
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                int computerRAM;
                 String computerName = computerNameText.getText();
                 int computerPower = Integer.parseInt(computerPowerText.getText());
-                int computerRAM = Integer.parseInt(computerRAMtext.getText());
+                while (!(Integer.parseInt(computerRAMtext.getText()) > 64 & Integer.parseInt(computerRAMtext.getText()) < 2048)) {
+                    JOptionPane.showMessageDialog(frame, "Please enter valid value between 64 and 2048", "Warning", JOptionPane.WARNING_MESSAGE);
+                    if (!(Integer.parseInt(computerRAMtext.getText()) > 64 & Integer.parseInt(computerRAMtext.getText()) < 2048)) {
+                        break;
+                    }
+                }
+                computerRAM = Integer.parseInt(computerRAMtext.getText());
                 Laptops computer = new Laptops(computerName, computerPower, computerRAM, Manufacturers.GL);
                 if (computer != null) {
-                computer.setName(computerName);
-                computer.setPower(computerPower);
-                computer.setDDRCapacity(computerRAM);
-                }
-                {
+                    computer.setName(computerName);
+                    computer.setPower(computerPower);
+                    computer.setDDRCapacity(computerRAM);
+                    MainForm.devices.setElementAt(computer,);
+
+                } else {
+                    computer.setName(computerName);
+                    computer.setPower(computerPower);
+                    computer.setDDRCapacity(computerRAM);
                     MainForm.devices.addElement(computer);
                 }
 

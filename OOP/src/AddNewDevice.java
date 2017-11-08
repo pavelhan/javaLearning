@@ -1,4 +1,5 @@
 import com.company.Manufacturers;
+import com.company.devicesHierarhy.Computers;
 import com.company.devicesHierarhy.Laptops;
 
 import javax.swing.*;
@@ -39,27 +40,26 @@ public class AddNewDevice {
                 int computerRAM;
                 String computerName = computerNameText.getText();
                 int computerPower = Integer.parseInt(computerPowerText.getText());
-                while (!(Integer.parseInt(computerRAMtext.getText()) > 64 & Integer.parseInt(computerRAMtext.getText()) < 2048)) {
+                while (Integer.parseInt(computerRAMtext.getText()) < Computers.minRam || Integer.parseInt(computerRAMtext.getText()) > Computers.maxRam) {
                     JOptionPane.showMessageDialog(frame, "Please enter valid value between 64 and 2048", "Warning", JOptionPane.WARNING_MESSAGE);
                     if (!(Integer.parseInt(computerRAMtext.getText()) > 64 & Integer.parseInt(computerRAMtext.getText()) < 2048)) {
                         break;
                     }
                 }
                 computerRAM = Integer.parseInt(computerRAMtext.getText());
-                Laptops computer = new Laptops(computerName, computerPower, computerRAM, Manufacturers.GL);
-                if (computer != null) {
-                    computer.setName(computerName);
-                    computer.setPower(computerPower);
-                    computer.setDDRCapacity(computerRAM);
-                    MainForm.devices.setElementAt(computer,);
 
+                if (laptops != null) {
+                    laptops.setName(computerName);
+                    laptops.setPower(computerPower);
+                    laptops.setDDRCapacity(computerRAM);
                 } else {
+                    Laptops computer = new Laptops(computerName, computerPower, computerRAM, Manufacturers.GL);
                     computer.setName(computerName);
                     computer.setPower(computerPower);
                     computer.setDDRCapacity(computerRAM);
                     MainForm.devices.addElement(computer);
                 }
-
+                frame.dispose();
             }
         });
         cancelButton.addActionListener(new ActionListener() {

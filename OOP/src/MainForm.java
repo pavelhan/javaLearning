@@ -66,8 +66,9 @@ public class MainForm {
         frame.setSize(800, 400);
         frame.setContentPane(new MainForm().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
+        //frame.pack();
         frame.setVisible(true);
+
 
 
     }
@@ -86,5 +87,6 @@ public class MainForm {
         devices.addElement(server);
 
         list1 = new JList(devices);// TODO: place custom component creation code here
+        list1.setAlignmentX(0);
     }
 }

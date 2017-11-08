@@ -6,6 +6,11 @@ public class ELTs extends TVs {
 
     public int screenFrequency;
 
+    @Override
+    public DeviceType getType() {
+        return DeviceType.ELTs;
+    }
+
     public ELTs(String name, int power, Manufacturers manufacturer){
         super(name, power, manufacturer);
     }

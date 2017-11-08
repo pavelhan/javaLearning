@@ -6,6 +6,7 @@ public class Laptops extends Computers {
 
     public int weight;
 
+
     public Laptops(String name, int DDRCapacity, int power, Manufacturers manufacturer){
         super(name, DDRCapacity, power, manufacturer);
 
@@ -13,6 +14,11 @@ public class Laptops extends Computers {
 
     public Laptops(String name){
         super(name);
+    }
+
+    @Override
+    public DeviceType getType() {
+        return DeviceType.Laptop;
     }
 
     public Laptops(String name, int power){

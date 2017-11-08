@@ -54,4 +54,9 @@ public class Servers extends Computers {
                 "name='" + name + '\'' +
                 " ]";
     }
+
+    @Override
+    public DeviceType getType() {
+        return DeviceType.Server;
+    }
 }

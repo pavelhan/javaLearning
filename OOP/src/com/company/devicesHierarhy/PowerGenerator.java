@@ -9,6 +9,11 @@ public class PowerGenerator extends Device {
         this.totalPower = totalPower;
     }
 
+    @Override
+    public DeviceType getType() {
+        return DeviceType.PowerGenerator;
+    }
+
     public PowerGenerator(String name, int totalPower){
         super(name);
         this.totalPower = totalPower;

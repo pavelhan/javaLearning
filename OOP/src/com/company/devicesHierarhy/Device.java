@@ -23,6 +23,7 @@ public abstract class Device {
     Manufacturers manufacturer;
     Battary battary;
     double price;
+    DeviceType type;
 
     //Unique ID generator
     private void setDeviceID() {
@@ -78,6 +79,8 @@ public abstract class Device {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public abstract DeviceType getType();
 
     //5. Создайте метод, который будет подсчитывать суммарную мощность всех ваших приборов.
     //Calculate totalPower of specified devices

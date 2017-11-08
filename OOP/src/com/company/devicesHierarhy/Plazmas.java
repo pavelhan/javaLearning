@@ -11,6 +11,11 @@ public final class Plazmas extends TVs {
         super(name, power, manufacturer);
     }
 
+    @Override
+    public DeviceType getType() {
+        return DeviceType.Plazma;
+    }
+
     public int getPixelCountX() {
         return pixelCountX;
     }

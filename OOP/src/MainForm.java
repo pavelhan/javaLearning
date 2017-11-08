@@ -1,11 +1,9 @@
-import com.company.devicesHierarhy.Device;
-import com.company.devicesHierarhy.Laptops;
-import com.company.devicesHierarhy.Players;
-import com.company.devicesHierarhy.Servers;
+import com.company.devicesHierarhy.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 
 public class MainForm {
 
@@ -14,8 +12,11 @@ public class MainForm {
     private JButton addNewDeviceButton;
     private JButton editDeviceButton;
     private JList list1;
+    private JButton openFile;
+    private JButton saveToFile;
     public static DefaultListModel devices;
     private static JFrame frame;
+    DeviceType deviceType;
 
 
     public MainForm() {
@@ -30,15 +31,11 @@ public class MainForm {
 
                     /*switch (userChoice){
                         case "Computer":*/
-                            addDeviceForm = new AddNewDevice(null);
-                        //break;
-                            //default:
-                            //addDeviceForm = new AddNewDevice(null);
+                    addDeviceForm = new AddNewDevice(null);
+                    //break;
+                    //default:
+                    //addDeviceForm = new AddNewDevice(null);
                     //}
-
-
-
-
 
 
                 }
@@ -59,6 +56,64 @@ public class MainForm {
                 }
             }
         });
+
+        //Open File
+        openFile.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String filepath = "";
+                JFileChooser fc = new JFileChooser();
+                int returnVal = fc.showOpenDialog(frame);
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    try {
+                        filepath = fc.getSelectedFile().getCanonicalPath();
+                        FileReader fr = new FileReader(filepath);
+                        BufferedReader bufferReader = new BufferedReader(fr);
+                        String str;
+                        while ((str = bufferReader.readLine()) != null) {
+
+                        String [] deviceParams = str.split(";");
+                            // TO DO ADD Switch case to create device regard to its DeviceType
+                        }
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+                File file = new File(filepath);
+
+            }
+        });
+
+        //Save to File
+        saveToFile.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fc = new JFileChooser();
+
+                int returnVal = fc.showSaveDialog(frame);
+
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+
+                    try {
+                        String filepath = fc.getSelectedFile().getCanonicalPath();
+                        FileWriter fos = null;
+                        fos = new FileWriter(filepath);
+                        for (int i = 0; i < devices.size(); i++) {
+                            if (devices.get(i) instanceof Device) {
+                                Device device = (Device) devices.get(i);
+                                fos.write(device.getDeviceID() + ";" +device.getType() + ";" + device.name + ";" + device.getPower() + ";\n");
+                            }
+                        }
+                        fos.close();
+
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
+
+
+                }
+            }
+        });
     }
 
     public static void main(String[] args) {
@@ -68,7 +123,6 @@ public class MainForm {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //frame.pack();
         frame.setVisible(true);
-
 
 
     }
@@ -88,5 +142,6 @@ public class MainForm {
 
         list1 = new JList(devices);// TODO: place custom component creation code here
         list1.setAlignmentX(0);
+
     }
 }

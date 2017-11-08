@@ -12,6 +12,11 @@ public class Players extends Device {
         //playbackType[2] = "Slowmotion";
     }
 
+    @Override
+    public DeviceType getType() {
+        return DeviceType.Player;
+    }
+
     public Players(String name, int power){
         super(name);
         super.setPower(power);

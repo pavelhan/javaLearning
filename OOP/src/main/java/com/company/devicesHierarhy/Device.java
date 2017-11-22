@@ -75,6 +75,15 @@ public abstract class Device {
         return this;
     }
 
+    //Get Manufacurer
+    public Manufacturers getManufacturer() {
+        return manufacturer;
+    }
+    //Set Manufacturer
+    public void setManufacturer(Manufacturers manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
     //Setter for price
     public void setPrice(double price) {
         this.price = price;

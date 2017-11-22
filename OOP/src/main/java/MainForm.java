@@ -1,9 +1,11 @@
 import com.company.devicesHierarhy.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
 
 public class MainForm {
 
@@ -116,15 +118,16 @@ public class MainForm {
         });
     }
 
-    public static void main(String[] args) {
-        frame = new JFrame("MainForm");
-        frame.setSize(800, 400);
-        frame.setContentPane(new MainForm().mainPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //frame.pack();
-        frame.setVisible(true);
-
-
+    public static void main(String[] args) throws InvocationTargetException, InterruptedException {
+        EventQueue.invokeAndWait(()-> {
+            frame = new JFrame("MainForm");
+            frame.setSize(800, 400);
+            frame.setContentPane(new MainForm().mainPanel);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            //frame.pack();
+            frame.setVisible(true);
+        }
+        );
     }
 
 
@@ -142,6 +145,9 @@ public class MainForm {
 
         list1 = new JList(devices);// TODO: place custom component creation code here
         list1.setAlignmentX(0);
+
+        addNewDeviceButton = new JButton();
+        addNewDeviceButton.setName("Add new device");
 
     }
 }

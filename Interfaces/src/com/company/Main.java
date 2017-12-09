@@ -12,6 +12,9 @@ public class Main {
         Worker cleaner2 = new Worker(150);
         Managers manager = new Managers(500);
         Builder builder = new Builder(250);
+        IBuilder builderX = new Builder(1000);
+        ICleaner cleanerX = new Cleaner(269);
+        Robot robot = new Robot();
 
         ICleaner[] employees = {cleaner1, cleaner2, manager, builder};
 
@@ -30,6 +33,12 @@ public class Main {
              employees) {
             System.out.println(((Employee)i).salary);
         }
+
+        robot.iBuilder =builder;
+        robot.iCleaner =cleaner1;
+
+        //robot.iCleaner.clean(ICleaner.Materials.CleningChemicals, ICleaner.Tools.Broom);
+
     }
 }
 

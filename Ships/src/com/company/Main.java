@@ -6,12 +6,10 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        try {
             dbConnection connection = new dbConnection();
-            connection.connectDB();
+            Ships ships = new Ships();
+            //connection.getObjectsFromDB(Ships.class,String.class);
+            connection.createDBWithContent("com.company");
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 }

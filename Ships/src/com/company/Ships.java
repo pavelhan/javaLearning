@@ -3,7 +3,7 @@ package com.company;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-@DatabaseTable(tableName = "products")
+@DatabaseTable(tableName = "productsclone")
 public class Ships {
     @DatabaseField(id = true)
     String productCode;

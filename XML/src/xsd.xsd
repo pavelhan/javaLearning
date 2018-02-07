@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="xx" xmlns:tns="xx">
+    <element name="plans">
+        <complexType>
+            <sequence>
+                <element name="plan" type="tns:plan" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="plan">
+        <sequence>
+            <element name="name"/>
+            <element name="operator"/>
+            <element name="Payroll">
+                <simpleType>
+                    <restriction base="integer">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="CallPrices" type="tns:Callprices">
+            </element>
+            <element name="SMSprice">
+                <simpleType>
+                    <restriction base="integer">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="Parameters" type="tns:Parameters"/>
+        </sequence>
+    </complexType>
+    <complexType name="Callprices">
+        <sequence>
+            <element name="internalCalls">
+                <simpleType>
+                    <restriction base="integer">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="outboundCalls">
+                <simpleType>
+                    <restriction base="integer">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="regularPhones">
+                <simpleType>
+                    <restriction base="integer">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="Parameters">
+        <sequence>
+            <element name="favoriteNumbers">
+                <simpleType>
+                    <restriction base="integer">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="tarrification">
+                <simpleType>
+                    <restriction base="integer">
+                        <enumeration value="12"/>
+                        <enumeration value="60"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="priceForPlanActivation">
+                <simpleType>
+                    <restriction base="integer">
+                        <minInclusive value="0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+</schema>

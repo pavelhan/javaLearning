@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:plans xmlns:tns="xx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="xx xsd.xsd">
+    <plan>
+        <name>Lifestyle</name>
+        <operator>Vodaphone</operator>
+        <Payroll>85</Payroll>
+        <CallPrices>
+            <internalCalls>0</internalCalls>
+            <outboundCalls>2</outboundCalls>
+            <regularPhones>3</regularPhones>
+        </CallPrices>
+        <SMSprice>0</SMSprice>
+        <Parameters>
+            <favoriteNumbers>5</favoriteNumbers>
+            <tarrification>12</tarrification>
+            <priceForPlanActivation>10</priceForPlanActivation>
+        </Parameters>
+    </plan>
+    <plan>
+        <name>Nice</name>
+        <operator>Life</operator>
+        <Payroll>100</Payroll>
+        <CallPrices>
+            <internalCalls>1</internalCalls>
+            <outboundCalls>3</outboundCalls>
+            <regularPhones>5</regularPhones>
+        </CallPrices>
+        <SMSprice>5</SMSprice>
+        <Parameters>
+            <favoriteNumbers>3</favoriteNumbers>
+            <tarrification>12</tarrification>
+            <priceForPlanActivation>5</priceForPlanActivation>
+        </Parameters>
+    </plan>
+    <plan>
+        <name>Fresh</name>
+        <operator>Kyivstar</operator>
+        <Payroll>50</Payroll>
+        <CallPrices>
+            <internalCalls>0</internalCalls>
+            <outboundCalls>5</outboundCalls>
+            <regularPhones>1</regularPhones>
+        </CallPrices>
+        <SMSprice>0</SMSprice>
+        <Parameters>
+            <favoriteNumbers>1</favoriteNumbers>
+            <tarrification>60</tarrification>
+            <priceForPlanActivation>40</priceForPlanActivation>
+        </Parameters>
+    </plan>
+</tns:plans>
+
